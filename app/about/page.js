@@ -1,10 +1,23 @@
 "use client";
+{
+  /* Call to Action Section */
+}
+{
+  /*   <div className="mt-12 text-center">
+          <Link
+            href="/contact"
+            className="bg-cyan-600 text-white py-3 px-8 rounded-full text-2xl font-semibold transition duration-300 ease-in-out hover:bg-cyan-700"
+          >
+            Lépj kapcsolatba velem
+          </Link>
+        </div> */
+}
 
 import Link from "next/link";
 
 function Page() {
   return (
-    <div className="h-full bg-black text-white">
+    <div className="h-full bg-[#212121] text-white">
       <div className="container mx-auto px-4 py-12">
         {/* Introduction Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -25,13 +38,12 @@ function Page() {
             <img
               src="/me.png"
               alt="Portrait"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg  shadow-xl"
             />
           </div>
         </div>
-
         {/* About Section */}
-        <div className="mt-12 bg-gray-800 p-8 rounded-lg shadow-lg">
+        <div className="mt-12 bg-[#333] p-8 rounded-lg shadow-lg">
           <h2 className="text-3xl font-semibold text-cyan-500 mb-6">
             Miért válassz engem?
           </h2>
@@ -46,14 +58,13 @@ function Page() {
             valóra váltsam ötleteidet.
           </p>
         </div>
-
         {/* Skills Section */}
         <div className="mt-12">
           <h2 className="text-3xl font-semibold text-cyan-500 mb-6">
             Technikák, melyekkel dolgozom:
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+            <div className="bg-[#444] p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
               <h3 className="text-2xl font-semibold text-white mb-4">
                 Frontend
               </h3>
@@ -63,7 +74,7 @@ function Page() {
                 <li>Tailwind CSS</li>
               </ul>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+            <div className="bg-[#444] p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
               <h3 className="text-2xl font-semibold text-white mb-4">
                 Backend & Databases
               </h3>
@@ -71,7 +82,7 @@ function Page() {
                 <li>Supabase</li>
               </ul>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+            <div className="bg-[#444] p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
               <h3 className="text-2xl font-semibold text-white mb-4">
                 Tools & Workflow
               </h3>
@@ -83,11 +94,9 @@ function Page() {
             </div>
           </div>
         </div>
-
-        {/* Call to Action Section */}
         <div className="mt-12 text-center">
           <Link
-            href="mailto:troli0723@gmail.com"
+            href="/contact"
             className="bg-cyan-600 text-white py-3 px-8 rounded-full text-2xl font-semibold transition duration-300 ease-in-out hover:bg-cyan-700"
           >
             Lépj kapcsolatba velem
@@ -97,5 +106,4 @@ function Page() {
     </div>
   );
 }
-
 export default Page;
