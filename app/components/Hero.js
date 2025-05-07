@@ -1,49 +1,85 @@
 "use client";
-
+import React from "react";
+import { FaGithub, FaLinkedin, FaAt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
-function Hero() {
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay },
+  }),
+};
+
+export default function HeroSection() {
   return (
-    <div className="bg-center bg-no-repeat bg-gray-600 bg-[url('/hero.webp')] bg-cover  bg-blend-multiply px-4  h-screen">
-      <div className="relative">
+    <div className="min-h-fit  px-6 pb-6 pt-5 mt-6 md:min-h-screen lg:min-h-screen w-full flex flex-col md:flex-row overflow-hidden">
+      {/* Bal oldal */}
+      <motion.div
+        className="w-full md:w-1/2  bg-gradient-to-b from-white via-cyan-700 to-white p-10 flex flex-col justify-center items-center text-black clip-left"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUpVariant}
+        custom={0}
+      >
         <motion.h1
-          initial={{ x: "100vw" }} // Az animáció kezdőpontja (balról indul)
-          animate={{ x: 0 }} // Az animáció végpontja (középre kerül)
-          transition={{ type: "spring", stiffness: 50 }} // Rugós hatású animáció
-          className="mt-48 dark:text-red-700  absolute font-playfair text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent  lg:text-3xl sm:px-16 lg:px-48"
+          variants={fadeUpVariant}
+          custom={0.3}
+          className="text-4xl md:text-5xl font-bold text-white"
         >
-          Szia, Roland vagyok, szenvedélyes webfejlesztő, aki a modern, nagy
-          teljesítményű weboldalak létrehozására összpontosít. Tapasztalatom van
-          a Next.js, React és frontend fejlesztés terén, és specializálódom
-          elegáns, gyors és felhasználóbarát weboldalak készítésére
-          vállalkozások számára.
-          <span>
-            <Link href="/contact">
-              <motion.button
-                initial={{ x: "100vw" }}
-                animate={{ x: 0 }}
-                transition={{ type: "spring", stiffness: 50 }}
-                className="px-6 py-1 cursor-pointer mb-4 text-white bg-blue-500 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-lg"
-              >
-                Lépj kapcsolatba
-              </motion.button>
-            </Link>
-
-            <span>
-              <motion.p
-                initial={{ width: 0 }} // Kezdetben nulla szélesség
-                animate={{ width: "100%" }} // Teljes szélességre nyílik
-                transition={{ duration: 2, ease: "easeOut" }} // Lágy kifutás
-                className="absolute  left-1/2 border-1 border-white "
-                style={{ transform: "translateX(-50%)" }} // Középről indul
-              ></motion.p>
-            </span>
-          </span>
+          Tóth Roland
         </motion.h1>
-      </div>
+        <motion.p
+          variants={fadeUpVariant}
+          custom={0.5}
+          className="text-sm md:text-lg text-white mt-2"
+        >
+          Front-end Developer / UI Designer
+        </motion.p>
+
+        <motion.div
+          variants={fadeUpVariant}
+          custom={0.7}
+          className="flex gap-4 mt-6"
+        >
+          <a
+            href="mailto:your.email@example.com"
+            className="p-3 bg-white rounded shadow hover:scale-105 transition"
+          >
+            <FaAt size={20} />
+          </a>
+          <a
+            href="https://github.com/yourusername"
+            className="p-3 bg-white rounded shadow hover:scale-105 transition"
+          >
+            <FaGithub size={20} />
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            className="p-3 bg-white rounded shadow hover:scale-105 transition"
+          >
+            <FaLinkedin size={20} />
+          </a>
+        </motion.div>
+      </motion.div>
+
+      {/* Jobb oldal */}
+      <motion.div
+        className="w-full md:w-1/2 bg-gradient-to-b from-white via-cyan-900 to-white text-white flex items-center justify-center p-10 clip-right"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUpVariant}
+        custom={0.5}
+      >
+        <p className="text-center ml-2 md:text-2xl leading-relaxed max-w-md ">
+          „Modern, reszponzív weboldalakat tervezek és készítek, különös
+          figyelmet fordítva a felhasználói élményre és a letisztult kódra.
+          Alkossunk együtt valami nagyszerűt!”
+        </p>
+      </motion.div>
     </div>
   );
 }
-
-export default Hero;

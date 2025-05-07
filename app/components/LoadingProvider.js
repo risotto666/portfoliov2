@@ -42,7 +42,7 @@ export function LoadingProvider({ children }) {
                 transition={{ repeat: Infinity, duration: 0.5 }}
                 className="text-slate-700"
               >
-                LOADING...
+                Oldal betöltése...
               </motion.span>
             </motion.div>
           </motion.div>

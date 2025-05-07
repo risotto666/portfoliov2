@@ -1,8 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Element, Link } from "react-scroll";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
+const fadeUpVariant = {
+  hidden: { opacity: 0 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+
+    transition: { duration: 0.6, delay },
+  }),
+};
 function Navbar() {
   const [navbarHidden, setNavbarHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -35,30 +44,42 @@ function Navbar() {
   }, [lastScrollY, navbarHidden, router.pathname]);
 
   return (
-    <div
-      className={`fixed top-0  left-0 w-full bg-white  py-4 px-6 z-10 ${
-        navbarHidden ? "-translate-y-full" : "translate-y-0"
-      } transition-transform duration-300 `}
-      style={{ fontFamily: "Poppins, sans-serif" }}
-    >
-      <ul className="flex text-2xl gap-x-8 justify-center">
-        <Link href="/">
-          <li className="text-gray-600 hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 hover:underline">
-            Főoldal
-          </li>
-        </Link>
-        <Link href="/about">
-          <li className="text-gray-600 hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 hover:underline">
-            Rólam
-          </li>
-        </Link>
-        <Link href="/projects">
-          <li className="text-gray-600 hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 hover:underline">
-            Munkáim
-          </li>
-        </Link>
-      </ul>
-    </div>
+    <Element name="home">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUpVariant}
+        custom={0.6}
+        className={`fixed top-0  left-0 w-full bg-white  py-4 px-6 z-10 ${
+          navbarHidden ? "-translate-y-full" : "translate-y-0"
+        } transition-transform duration-300 `}
+        style={{ fontFamily: "Poppins, sans-serif" }}
+      >
+        <ul className="flex md:text-2xl lg:text-3xl gap-x-8 justify-center">
+          <Link to="home" smooth={true} duration={500}>
+            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+              Főoldal
+            </li>
+          </Link>
+          <Link to="about" smooth={true} duration={500}>
+            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+              Rólam
+            </li>
+          </Link>
+          <Link to="projects" smooth={true} duration={500}>
+            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+              Munkáim
+            </li>
+          </Link>
+          <Link to="contact" smooth={true} duration={500}>
+            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+              Kapcsolat
+            </li>
+          </Link>
+        </ul>
+      </motion.div>
+    </Element>
   );
 }
 

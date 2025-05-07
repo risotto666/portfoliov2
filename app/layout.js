@@ -1,8 +1,14 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+
 import { LoadingProvider } from "./components/LoadingProvider";
 import Head from "next/head";
+import { Domine } from "next/font/google";
+
+const domine = Domine({
+  subsets: ["latin"],
+  weight: ["400"], // csak 400-as súly érhető el
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,9 +66,8 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${domine.className}  ${geistMono.variable} antialiased`}
       >
-        <Navbar />
         <LoadingProvider> {children}</LoadingProvider>
       </body>
     </html>
