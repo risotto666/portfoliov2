@@ -49,7 +49,7 @@ export default function Contact() {
             </p>
             <p>
               <strong>Cím:</strong>
-              3051 Szarvasdege Kossuth ut 42.
+              3051 Szarvasdege Kossuth út 42.
               <br />
               <strong>Telefon:</strong> <span>06-20-212-6622</span>
               <br />

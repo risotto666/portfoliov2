@@ -49,6 +49,17 @@ const Projects = () => {
 
       liveUrl: "https://quiz-virid-six.vercel.app",
     },
+    {
+      id: 4,
+      title: "Étel rendelés",
+      description:
+        "Ez az étterem ételrendelő weboldal egyszerű és felhasználóbarát megoldást kínál a vendégek számára, hogy gyorsan és kényelmesen leadják rendeléseiket. A tiszta dizájn és a gyors rendelési folyamat kiemelik az étterem modern, ügyfélközpontú szolgáltatását.",
+      image: "/etterem.png",
+      category: "nextjs",
+      tags: ["Next.js", "Tailwind CSS"],
+
+      liveUrl: "https://etterem.vercel.app",
+    },
   ];
 
   const filteredProjects =

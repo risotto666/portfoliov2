@@ -17,11 +17,11 @@ body {
 
   @media (max-width: 768px) {
     .clip-left {
-      clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+      clip-path: none;
     }
 
     .clip-right {
-      clip-path: polygon(0 0, 100%, 100% 100%, 0% 100%);
+      clip-path: none;
     }
   }
 }
