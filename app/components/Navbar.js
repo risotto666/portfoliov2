@@ -58,22 +58,22 @@ function Navbar() {
       >
         <ul className="flex md:text-2xl lg:text-3xl gap-x-8 justify-center">
           <Link to="home" smooth={true} duration={500}>
-            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+            <li className="text-cyan-800 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
               Főoldal
             </li>
           </Link>
           <Link to="about" smooth={true} duration={500}>
-            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+            <li className="text-cyan-800 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
               Rólam
             </li>
           </Link>
           <Link to="projects" smooth={true} duration={500}>
-            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+            <li className="text-cyan-800 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
               Munkáim
             </li>
           </Link>
           <Link to="contact" smooth={true} duration={500}>
-            <li className="text-cyan-500 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
+            <li className="text-cyan-800 cursor-pointer hover:text-cyan-600 transition duration-300 ease-in-out transform hover:scale-110 ">
               Kapcsolat
             </li>
           </Link>

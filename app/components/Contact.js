@@ -35,7 +35,7 @@ export default function Contact() {
         custom={0}
         className="min-h-screen bg-white p-8"
       >
-        <h1 className="text-4xl font-bold mb-6 text-cyan-500 text-center">
+        <h1 className="text-4xl font-bold mb-6 text-cyan-800 text-center">
           Kapcsolatfelvétel
         </h1>
 
@@ -48,7 +48,7 @@ export default function Contact() {
               űrlapot.
             </p>
             <p>
-              <strong>Cím:</strong>
+              <strong>Cím: </strong>
               3051 Szarvasdege Kossuth út 42.
               <br />
               <strong>Telefon:</strong> <span>06-20-212-6622</span>

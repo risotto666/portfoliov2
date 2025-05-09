@@ -2,6 +2,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaAt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -14,10 +15,10 @@ const fadeUpVariant = {
 
 export default function HeroSection() {
   return (
-    <div className="min-h-fit  px-6 pb-6 pt-5 mt-6 md:min-h-screen lg:min-h-screen w-full flex flex-col md:flex-row overflow-hidden">
+    <div className="min-h-fit mt-12  px-2 pb-6 pt-5  md:min-h-screen lg:min-h-screen w-full flex flex-col md:flex-row overflow-hidden">
       {/* Bal oldal */}
       <motion.div
-        className="w-full md:w-1/2  bg-gradient-to-b from-white via-cyan-700 to-white p-10 flex flex-col justify-center items-center text-black clip-left"
+        className="w-full md:w-1/2 pb-24 rounded-2xl  bg-gradient-to-b from-cyan-900 via-cyan-900 to-white p-10 flex flex-col justify-center items-center text-black clip-left"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -44,41 +45,54 @@ export default function HeroSection() {
           custom={0.7}
           className="flex gap-4 mt-6"
         >
-          <a
-            href="mailto:your.email@example.com"
+          <Link
+            target="blank"
+            href="mailto:troli0723@gmail.com"
             className="p-3 bg-white rounded shadow hover:scale-105 transition"
           >
             <FaAt size={20} />
-          </a>
-          <a
-            href="https://github.com/yourusername"
+          </Link>
+          <Link
+            target="blank"
+            href="https://github.com/risotto666"
             className="p-3 bg-white rounded shadow hover:scale-105 transition"
           >
             <FaGithub size={20} />
-          </a>
-          <a
+          </Link>
+          <Link
+            target="blank"
             href="https://linkedin.com/in/yourusername"
             className="p-3 bg-white rounded shadow hover:scale-105 transition"
           >
             <FaLinkedin size={20} />
-          </a>
+          </Link>
         </motion.div>
+        <p className="text-center ml-2 md:text-2xl mt-1 text-white leading-relaxed max-w-md ">
+          „Modern, reszponzív weboldalakat tervezek és készítek, különös
+          figyelmet fordítva a felhasználói élményre és a letisztult kódra.
+          Alkossunk együtt valami nagyszerűt!”
+        </p>
       </motion.div>
 
       {/* Jobb oldal */}
       <motion.div
-        className="w-full md:w-1/2 bg-gradient-to-b from-white via-cyan-900 to-white text-white flex items-center justify-center p-10 clip-right"
+        className="w-full md:w-1/2 flex items-center justify-center "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeUpVariant}
         custom={0.5}
       >
-        <p className="text-center ml-2 md:text-2xl leading-relaxed max-w-md ">
+        <img
+          src="/web3.gif"
+          alt="Profile"
+          className="h-full w-full rounded-2xl "
+        />
+        {/*   <p className="text-center ml-2 md:text-2xl leading-relaxed max-w-md ">
           „Modern, reszponzív weboldalakat tervezek és készítek, különös
           figyelmet fordítva a felhasználói élményre és a letisztult kódra.
           Alkossunk együtt valami nagyszerűt!”
-        </p>
+        </p> */}
       </motion.div>
     </div>
   );

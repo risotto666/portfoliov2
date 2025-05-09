@@ -1,11 +1,15 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { LoadingProvider } from "./components/LoadingProvider";
 import Head from "next/head";
-import { Domine } from "next/font/google";
+import { Domine, Lora } from "next/font/google";
 
 const domine = Domine({
+  subsets: ["latin"],
+  weight: ["400"], // csak 400-as súly érhető el
+});
+
+const lora = Lora({
   subsets: ["latin"],
   weight: ["400"], // csak 400-as súly érhető el
 });
@@ -66,9 +70,9 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <body
-        className={`${geistSans.variable} ${domine.className}  ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${lora.className}  ${geistMono.variable} antialiased`}
       >
-        <LoadingProvider> {children}</LoadingProvider>
+        {children}
       </body>
     </html>
   );

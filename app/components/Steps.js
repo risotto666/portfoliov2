@@ -26,8 +26,8 @@ const scaleInVariant = {
 };
 export function Steps() {
   return (
-    <div className="mt-12 rounded-3xl shadow-xl mb-12 bg-gray-50 p-8">
-      <h1 className="text-3xl text-cyan-500 font-bold  mb-4">
+    <div className="mt-12 rounded-3xl shadow-xl mb-12 p-8">
+      <h1 className="text-3xl text-cyan-800 font-bold  mb-4">
         Így készül a weboldalad
       </h1>
       <Timeline horizontal className="px-6">
@@ -39,7 +39,6 @@ export function Steps() {
           custom={0}
         >
           <TimelineItem>
-            <TimelinePoint />
             <TimelineContent>
               <TimelineTime>1.</TimelineTime>
               <TimelineTitle>Megbeszélés és tervezés</TimelineTitle>
@@ -58,7 +57,6 @@ export function Steps() {
           custom={1}
         >
           <TimelineItem>
-            <TimelinePoint />
             <TimelineContent>
               <TimelineTime>2.</TimelineTime>
               <TimelineTitle>Fejlesztés és tesztelés</TimelineTitle>
@@ -75,10 +73,9 @@ export function Steps() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={scaleInVariant}
-          custom={2}
+          custom={1}
         >
           <TimelineItem>
-            <TimelinePoint />
             <TimelineContent>
               <TimelineTime>3.</TimelineTime>
               <TimelineTitle>Átadás és támogatás</TimelineTitle>

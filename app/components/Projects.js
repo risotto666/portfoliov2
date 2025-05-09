@@ -79,12 +79,17 @@ const Projects = () => {
       >
         <section className="hero-gradient text-black py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl text-cyan-500 font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl text-cyan-800 font-bold mb-4">
               Portfolióm
             </h1>
             <p className="text-xl text-gray-900 max-w-2xl mx-auto">
               A projektjeim és munkáim bemutatója, amelyek szemléltetik a React,
               Tailwind CSS, Next.js és Supabase terén szerzett tudásomat.
+            </p>
+            <p className="text-sm mt-2 text-gray-500 mx-auto">
+              (A bemutatott projektek kizárólag illusztrációs célt szolgálnak.
+              Nem élő, működő weboldalak, hanem demo verziók, amelyek a
+              fejlesztői munkám minőségét és stílusát hivatottak bemutatni.)
             </p>
           </div>
         </section>

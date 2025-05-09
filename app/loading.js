@@ -1,11 +1,5 @@
-import { LoadingProvider } from "./components/LoadingProvider";
-
 function loading() {
-  return (
-    <div>
-      <LoadingProvider />
-    </div>
-  );
+  return <div>Loading...</div>;
 }
 
 export default loading;
